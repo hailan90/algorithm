@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+<script>
+
+    let max = 200000;
+
+    function multiple() {
+        let output = document.getElementById("output");
+        let result = [];
+        for(let i = 1; i < max; i++) {
+            if(i % 3 === 0 && i % 5 === 0) {
+                result.push("FizzBuzz");
+            }else if(i % 3 === 0) {
+                result.push("Fizz");
+            }else if(i % 5 === 0) {
+                result.push("Buzz");
+            }else {
+                result.push(i.toString());
+            }
+        }
+        output.innerHTML = result.join("<br>");
+    }
+    multiple();
+</script>
+</html>
